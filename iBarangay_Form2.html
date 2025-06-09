@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barangay Identification Card Application Form</title>
+    <style>
+        body {
+            background-image: url('https://i0.wp.com/palmlawoffice.com/wp-content/uploads/2022/10/paranaque-city-law-office.jpg?w=1050&ssl=1');
+            background-size: cover; 
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: whitesmoke;
+            border-radius: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        .residency-container {
+            display: flex;
+            align-items: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid black;
+            border-radius: 4px;
+            box-sizing: border-box; 
+        }
+        button {
+            padding: 10px 15px;
+            background-color: burlywood;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: auto; 
+        }
+        .logo {
+            display: block;
+            margin: auto; 
+            max-width: 150px; 
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<img src="https://app.bploparanaque.com/safetyseal/images/logo.png" alt="City Seal" class="logo">
+<h1>BARANGAY IDENTIFICATION CARD APPLICATION</h1>
+<div class="form-container">
+    <form action="/submit-barangay-id" method="POST">
+
+        <h3>Name</h3>
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+
+        <label for="middle_name">Middle Name:</label>
+        <input type="text" id="middle_name" name="middle_name">
+
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        
+        <h3>Present Address</h3>
+        <label for="house_no">House No:</label>
+        <input type="text" id="house_no" name="house_no">
+
+        <label for="street">Street:</label>
+        <input type="text" id="street" name="street">
+
+        <label for="subdivision">Subdivision:</label>
+        <input type="text" id="subdivision" name="subdivision">
+
+        <h3>Voters Registration Record</h3>
+        <label for="precinct_no">Precinct No:</label>
+        <input type="text" id="precinct_no" name="precinct_no">
+
+        <label for="voter_registration_no">VRR No:</label>
+        <input type="text" id="voter_registration_no" name="voter_registration_no">
+
+        <label for="date_of_registration">Date of Registration:</label>
+        <input type="date" id="date_of_registration" name="date_of_registration">
+
+        <div class="residency-container">
+            <label>Type of Residency:</label>
+            <input type="radio" id="homeowner" name="type_of_residency" value="Homeowner">
+            <label for="homeowner">Homeowner</label>
+            <input type="radio" id="renter" name="type_of_residency" value="Renter">
+            <label for="renter">Renter</label>
+            <input type="radio" id="boarder" name="type_of_residency" value="Boarder">
+            <label for="boarder">Boarder</label>
+            <input type="radio" id="tenant" name="type_of_residency" value="Tenant">
+            <label for="tenant">Tenant</label>
+        </div>
+
+        <h3>Birth Record</h3>
+        <label for="date_of_birth">Date of Birth:</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" required>
+
+        <label for="place_of_birth">Place of Birth:</label>
+        <input type="text" id="place_of_birth" name="place_of_birth" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+
+        <h3>Government Issued Identification Nos.</h3>
+        <label for="tin_no">TIN No:</label>
+        <input type="text" id="tin_no" name="tin_no">
+
+        <label for="sss_no">SSS/GSIS No:</label>
+        <input type="text" id="sss_no" name="sss_no">
+
+        <label for="philhealth_no">PhilHealth No.:</label>
+        <input type="text" id="philhealth_no" name="philhealth_no" />
+        
+        <label for="pagibig_no">Pag-IBIG/HDMF No.:</label>
+        <input type="text" id="pagibig_no" name="pagibig_no" />
+
+        <h3>Emergency Contact Information</h3>
+        <label for="emergency_contact_name">Emergency Contact Name:</label>
+        <input type="text" id="emergency_contact_name" name="emergency_contact_name" required>
+        
+        <label for="emergency_contact_relation">Relation to Emergency Contact:</label>
+        <input type="text" id="emergency_contact_relation" name="emergency_contact_relation" required>
+        
+        <label for="emergency_contact_number">Emergency Contact Number:</label>
+        <input type="text" id="emergency_contact_number" name="emergency_contact_number" required>
+
+        <label for="civil_status">Civil Status:</label>
+        <select id="civil_status" name="civil_status" required>
+            <option value="Single">Single</option>
+            <option value="Married">Married</option>
+            <option value="Widowed">Widowed</option>
+            <option value="Annulled">Annulled</option>
+        </select>
+
+        <h3>Personal Data</h3>
+        <label for="citizenship">Citizenship:</label>
+        <input type="text" id="citizenship" name="citizenship">
+
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height">
+
+        <label for="weight">Weight:</label>
+        <input type="text" id="weight" name="weight">
+
+        <label for="eye_color">Eye Color:</label>
+        <input type="text" id="eye_color" name="eye_color">
+
+        <h3>Educational Background</h3>
+        <label for="school_name">Name of School:</label>
+        <input type="text" id="school_name" name="school_name">
+
+        <label for="degree">Degree:</label>
+        <input type="text" id="degree" name="degree">
+
+        <h3>Family Background</h3>
+        <label for="father_name">Father's Name:</label>
+        <input type="text" id="father_name" name="father_name">
+
+        <label for="father_birth">Father's Date of Birth:</label>
+        <input type="date" id="father_birth" name="father_birth">
+
+        <label for="mother_name">Mother's Name:</label>
+        <input type="text" id="mother_name" name="mother_name">
+
+        <label for="mother_birth">Mother's Date of Birth:</label>
+        <input type="date" id="mother_birth" name="mother_birth">
+
+        <h3>Contact Details</h3>
+        <label for="contact_no">Contact No:</label>
+        <input type="text" id="contact_no" name="contact_no">
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email">
+        
+        <center><h2>CERTIFICATION</h2></center>
+        <div class="section">
+            I certify that all of the following information/data and/or matters indicated in this Application Form and such documents attached hereto are true, and that there are no false statements misrepresentations or omissions herein. Any such false statements, misrepresentations or omissions will be sufficient ground for PARAÑAQUE to reject this application, without prejudice to any other legal remedies PARAÑAQUE may be entitled to under the premises.
+        </div>
+
+        <div class="section">
+            <strong>SIGNATURE OVER PRINTED NAME:</strong> ______________________ <br>
+            <strong>DATE:</strong> ______________________
+        </div>
+
+        <div class="section">
+            <strong>SPECIMEN SIGNATURE</strong> (Please use maker pen & limit your signature inside the box)
+            <div style="border: 1px solid black; height: 50px; margin-top: 10px;"></div>
+        </div>
+
+        <div class="section">
+            <strong>ID NO.:</strong> _________________________ <br>
+            <em>(Leave this portion blank for barcode usage)</em>
+        </div>
+
+        <div class="section">
+            <strong>PLEASE SUBMIT THIS BRGY. ID APPLICATION FORM WITH THE FOLLOWING REQUIREMENTS:</strong>
+            <ul class="requirement-list">
+                <li>1. HOMEOWNERS ASSOCIATION CLEARANCE / VOTER'S REGISTRATION RECORD CERTIFICATE (PHOTOCOPY)</li>
+                <li>2. BIRTH CERTIFICATE (PHOTOCOPY)</li>
+                <li>3. PHOTO COPY OF ANY VALID ID (IF ANY)</li>
+                <li>4. 2 X 2 ID PICTURE W/ WHITE BACKGROUND</li>
+            </ul>
+        </div>
+
+        <div class="section" style="text-align: center;">
+            <p>2X2 <br> ID PICTURE</p>
+            <strong>PLS. PASTE</strong> <br>
+            <strong>DO NOT STAPLE</strong>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
